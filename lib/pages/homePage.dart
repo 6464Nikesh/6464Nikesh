@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:testing_app/Models/TransactionResponseModel.dart';
-import 'package:testing_app/services/api_service.dart';
 import 'package:intl/intl.dart';
+import 'package:testing_app/services/ApiManager.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _HomepageState extends State<Homepage> {
 
   @override
   void initState() {
-    _transaction = API_Manager().getTrancations();
+    _transaction = ApiManager().getTrancations();
     super.initState();
   }
 
