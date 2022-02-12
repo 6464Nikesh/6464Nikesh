@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:testing_app/Models/AllDrivers.dart';
 import 'package:testing_app/Models/TransactionResponseModel.dart';
 import 'package:intl/intl.dart';
 import 'package:testing_app/services/ApiManager.dart';
@@ -49,21 +52,22 @@ class _HomepageState extends State<Homepage> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        '${DateFormat('dd').format(date)}',
+                                        DateFormat('dd').format(date),
+                                        // ignore: prefer_const_constructors
                                         style: TextStyle(
                                             fontSize: 28,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
                                       Text(
-                                        '${DateFormat('MMMM').format(date)}',
+                                        DateFormat('MMMM').format(date),
                                         style: TextStyle(
                                           fontSize: 15,
                                           color: Colors.white,
                                         ),
                                       )
                                     ],
-                                  )),
+                                  ))
                             ],
                           ),
                         ),

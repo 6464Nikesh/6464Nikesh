@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testing_app/Pages/homePage.dart';
+import 'package:testing_app/pages/InsertTransaction.dart';
 import 'package:testing_app/pages/login.dart';
 import 'package:testing_app/value/Routes.dart';
 
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: MyRoutes.loginRoute,
+      initialRoute: MyRoutes.transactionRoute,
       routes: {
         MyRoutes.homeRoute: (context) => Homepage(),
-        MyRoutes.loginRoute: (context) => LoginPage()
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.transactionRoute: (context) => InsertTransaction()
       },
     );
   }
